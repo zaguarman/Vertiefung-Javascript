@@ -4,7 +4,26 @@ class BMI {
     this.size = size;
   }
 
-  getValue(mass, size) {
-    return mass / (size / 100) ** 2;
+  // Mass
+  get mass() {
+    return this.mass;
+  }
+
+  set mass(mass) {
+    this.mass = mass;
+  }
+
+  // Size
+  get size() {
+    return this.size;
+  }
+
+  set size(size) {
+    this.size = size;
+  }
+
+  // Methods
+  getValue() {
+    return this.mass / (this.size / 100) ** 2;
   }
 }
