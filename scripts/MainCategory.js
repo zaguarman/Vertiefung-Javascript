@@ -12,4 +12,22 @@ class MainCategory extends Category {
   set subCategories(subCategories) {
     this._subCategories = subCategories;
   }
+
+  static parseJson(mainCategoryData) {
+    const subCategoriesData =
+      mainCategoryData[
+        Object.keys(mainCategoryData).find(
+          (key) => key.toLowerCase() === "subcategories"
+        )
+      ] || [];
+
+    const subCategories = subCategoriesData.map((subCategoryData) => {
+      return SubCategory.parseJson(subCategoryData);
+    });
+
+    return new MainCategory({
+      ...mainCategoryData,
+      subCategories: subCategories,
+    });
+  }
 }

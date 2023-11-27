@@ -9,6 +9,10 @@
 
 "use strict";
 
+function parseJsonTest() {
+  console.log(Categories.parseJson());
+}
+
 function showBMIResult() {
   let bmi = new BMI(
     document.forms.entry.weight.value,
@@ -29,6 +33,8 @@ function showBMIResult() {
 }
 
 function showBMITable() {
+  console.log(Categories.parseJson());
+
   let table = "";
   table += `<table style="background-color: lavender;width: 50%">`;
   table += `<caption>Beurteilungen zum BMI (nach WHO, Stand 2008)</caption>`;
