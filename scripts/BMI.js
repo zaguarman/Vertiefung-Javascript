@@ -11,6 +11,7 @@ class BMI {
   set mass(mass) {
     this._mass = mass;
   }
+
   // Size
   get size() {
     return this._size;
@@ -19,8 +20,9 @@ class BMI {
   set size(size) {
     this._size = size;
   }
+
   // Methods
-  value() {
+  get value() {
     return this._mass / (this._size / 100) ** 2;
   }
 }

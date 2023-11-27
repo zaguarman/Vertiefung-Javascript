@@ -1,9 +1,8 @@
 class Category {
-  constructor(name, low, high, subCategories = []) {
+  constructor(name, low, high) {
     this._name = name;
     this._low = low;
     this._high = high;
-    this._subCategories = subCategories;
   }
 
   // Name
@@ -31,14 +30,5 @@ class Category {
 
   set high(high) {
     this._high = high;
-  }
-
-  // Categories
-  get subCategories() {
-    return this._subCategories;
-  }
-
-  set subCategories(subCategories) {
-    this._subCategories = subCategories;
   }
 }

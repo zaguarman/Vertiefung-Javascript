@@ -10,10 +10,10 @@
 "use strict";
 
 function showBMIResult() {
-  let bmi = new BMI({
-    mass: document.forms.entry.weight.value,
-    size: document.forms.entry.height.value,
-  });
+  let bmi = new BMI(
+    document.forms.entry.weight.value,
+    document.forms.entry.height.value
+  );
 
   document.getElementById(
     "mass"
@@ -43,7 +43,7 @@ function showBMITable() {
   table += `<tbody>`;
   for (let category of Categories.getArray()) {
     let subCategories = category.subCategories;
-    if (subCategories.length === 0) {
+    if (subCategories.length == 0) {
       table += `<tr>`;
       table += `<td>${category.name}</td>`;
       table += `<td></td>`;
