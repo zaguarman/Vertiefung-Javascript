@@ -1,29 +1,26 @@
 class BMI {
   constructor(mass, size) {
-    this.mass = mass;
-    this.size = size;
+    this._mass = mass;
+    this._size = size;
   }
-
   // Mass
   get mass() {
-    return this.mass;
+    return this._mass;
   }
 
   set mass(mass) {
-    this.mass = mass;
+    this._mass = mass;
   }
-
   // Size
   get size() {
-    return this.size;
+    return this._size;
   }
 
   set size(size) {
-    this.size = size;
+    this._size = size;
   }
-
   // Methods
   getValue() {
-    return this.mass / (this.size / 100) ** 2;
+    return this._mass / (this._size / 100) ** 2;
   }
 }
