@@ -27,7 +27,7 @@ function showBMIResult() {
   ).innerHTML = `<p>Ihre Körpergrösse: ${bmi.size} cm</p>`;
   document.getElementById(
     "bmi"
-  ).innerHTML = `<p>Ihr Body-Mass-Index (BMI): ${bmi.getValue.toFixed(
+  ).innerHTML = `<p>Ihr Body-Mass-Index (BMI): ${bmi.value.toFixed(
     2
   )} kg/m<sup>2</sup></p>`;
 }

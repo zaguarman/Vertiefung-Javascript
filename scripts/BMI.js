@@ -20,7 +20,7 @@ class BMI {
     this._size = size;
   }
   // Methods
-  getValue() {
+  value() {
     return this._mass / (this._size / 100) ** 2;
   }
 }
