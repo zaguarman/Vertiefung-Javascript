@@ -17,10 +17,10 @@ class HTML_Tools {
 
     // if does exist delete
     while (node.hasChildNodes()) {
-      node.removeChild(node.firstElementChild);
+      node.removeChild(node.firstChild);
     }
 
-    console.log("Node After:", node);
+    // console.log("Node After:", node);
 
     // add paragraph as child
     node.appendChild(paragraphWithText);
