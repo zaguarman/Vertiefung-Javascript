@@ -159,16 +159,3 @@ function showPage(pageId) {
       console.log("It didn't work, sorry :(");
   }
 }
-
-function showCalculator() {
-  console.log("Showing calculator");
-}
-
-function showTable() {
-  console.log("Showing table");
-  showBMITable();
-}
-
-function showIndex() {
-  console.log("Showing index");
-}
