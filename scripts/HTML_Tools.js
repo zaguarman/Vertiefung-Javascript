@@ -1,4 +1,7 @@
 class HTML_Tools {
+  // WARNING: DO NOT use the appendChild for method chaining,
+  // it does return null/void/undefined
+
   static addParagraph(elementId, text) {
     // search for the node
     let node = document.getElementById(elementId);
@@ -10,19 +13,14 @@ class HTML_Tools {
     let textNode = document.createTextNode(text);
 
     // append text element to paragraph element
-    let paragraphWithText = paragraph.appendChild(textNode);
-
-    console.log("node:", node);
-    console.log("Paragraph with text:", paragraphWithText);
+    paragraph.appendChild(textNode);
 
     // if does exist delete
     while (node.hasChildNodes()) {
       node.removeChild(node.firstChild);
     }
 
-    // console.log("Node After:", node);
-
     // add paragraph as child
-    node.appendChild(paragraphWithText);
+    node.appendChild(paragraph);
   }
 }
