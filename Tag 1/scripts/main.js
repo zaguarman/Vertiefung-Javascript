@@ -19,22 +19,41 @@ function showBMIResult() {
     document.forms.entry.height.value
   );
 
-  HTML_Tools.addParagraph("mass", `Ihre Körpermasse: ${bmi.mass} kg`);
-  HTML_Tools.addParagraph("size", `Ihre Körpergrösse: ${bmi.size} cm`);
-  HTML_Tools.addParagraph(
-    "bmi",
-    `Ihr Body-Mass-Index (BMI): ${bmi.value.toFixed(2)} kg/m<sup>2</sup>`
+  let massAnchorNode = document.getElementById("mass");
+  let sizeAnchorNode = document.getElementById("size");
+  let bmiAnchorNode = document.getElementById("bmi");
+
+  // Creating text nodes
+  let massTextNode = HTML_Tools.createElement(
+    "text",
+    `Ihre Körpermasse: ${bmi.mass} kg`
+  );
+  let sizeTextNode = HTML_Tools.createElement(
+    "text",
+    `Ihre Körpergrösse: ${bmi.size} cm`
+  );
+  let bmiTextNode = HTML_Tools.createElement(
+    "text",
+    `Ihr Body-Mass-Index (BMI): ${bmi.value.toFixed(2)} kg/m`
   );
 
-  // document.getElementById(
-  //   "mass"
-  // ).innerHTML = `<p>Ihre Körpermasse: ${bmi.mass} kg</p>`;
-  // document.getElementById(
-  //   "size"
-  // ).innerHTML = `<p>Ihre Körpergrösse: ${bmi.size} cm</p>`;
-  // document.getElementById(
-  //   "bmi"
-  // ).innerHTML = `<p>Ihr Body-Mass-Index (BMI): ${bmi.value.toFixed(2)} kg/m<sup>2</sup></p>`;
+  // Creating sup elements
+  let supNode = HTML_Tools.createElement("sup");
+
+  // Creating paragraph elements
+  let massParagraphNode = HTML_Tools.createElement("P");
+  let sizeParagraphNode = HTML_Tools.createElement("P");
+  let bmiParagraphNode = HTML_Tools.createElement("P");
+
+  // Adding text nodes and sup elements to paragraph elements
+  HTML_Tools.addElements(massParagraphNode, [massTextNode, supNode]);
+  HTML_Tools.addElements(sizeParagraphNode, [sizeTextNode, supNode]);
+  HTML_Tools.addElements(bmiParagraphNode, [bmiTextNode, supNode]);
+
+  // Adding paragraph elements to anchor nodes
+  HTML_Tools.addElements(massAnchorNode, [massParagraphNode]);
+  HTML_Tools.addElements(sizeAnchorNode, [sizeParagraphNode]);
+  HTML_Tools.addElements(bmiAnchorNode, [bmiParagraphNode]);
 }
 
 function showBMITable() {

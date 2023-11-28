@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML Template</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2">
+          <header>
+            <h1>Header</h1>
+          </header>
+        </td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>
+          <section>
+            <h2>Section</h2>
+            <p>This is the main content section of the page.</p>
+          </section>
+        </td>
+        <td rowspan="2">
+          <aside>
+            <h2>Aside</h2>
+            <p>
+              This is a side content section that is related to the main
+              content.
+            </p>
+          </aside>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <article>
+            <h2>Article</h2>
+            <p>
+              This is a specific piece of content, like a blog post or news
+              article.
+            </p>
+          </article>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <footer>
+            <p>This is my footer :)</p>
+          </footer>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
