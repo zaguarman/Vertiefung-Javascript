@@ -19,17 +19,22 @@ function showBMIResult() {
     document.forms.entry.height.value
   );
 
-  document.getElementById(
-    "mass"
-  ).innerHTML = `<p>Ihre Körpermasse: ${bmi.mass} kg</p>`;
-  document.getElementById(
-    "size"
-  ).innerHTML = `<p>Ihre Körpergrösse: ${bmi.size} cm</p>`;
-  document.getElementById(
-    "bmi"
-  ).innerHTML = `<p>Ihr Body-Mass-Index (BMI): ${bmi.value.toFixed(
-    2
-  )} kg/m<sup>2</sup></p>`;
+  HTML_Tools.addParagraph("mass", `Ihre Körpermasse: ${bmi.mass} kg`);
+  HTML_Tools.addParagraph("size", `Ihre Körpergrösse: ${bmi.size} cm`);
+  HTML_Tools.addParagraph(
+    "bmi",
+    `Ihr Body-Mass-Index (BMI): ${bmi.value.toFixed(2)} kg/m<sup>2</sup>`
+  );
+
+  // document.getElementById(
+  //   "mass"
+  // ).innerHTML = `<p>Ihre Körpermasse: ${bmi.mass} kg</p>`;
+  // document.getElementById(
+  //   "size"
+  // ).innerHTML = `<p>Ihre Körpergrösse: ${bmi.size} cm</p>`;
+  // document.getElementById(
+  //   "bmi"
+  // ).innerHTML = `<p>Ihr Body-Mass-Index (BMI): ${bmi.value.toFixed(2)} kg/m<sup>2</sup></p>`;
 }
 
 function showBMITable() {

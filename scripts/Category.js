@@ -34,19 +34,14 @@ class Category {
 
   static parseJson(categoryData) {
     // Check if the categoryData is defined and represents a MainCategory or SubCategory
-    if (
-      categoryData &&
-      Object.keys(categoryData).some(
-        (key) => key.toLowerCase() === "subcategories"
-      )
-    ) {
+    if (categoryData && categoryData?.subcategories) {
       return MainCategory.parseJson(categoryData);
     } else if (categoryData) {
       return SubCategory.parseJson(categoryData);
     } else {
       // Handle the case where categoryData is undefined
       console.error("Invalid categoryData:", categoryData);
-      return null; // or throw an error, depending on your use case
+      return null;
     }
   }
 }
