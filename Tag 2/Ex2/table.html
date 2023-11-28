@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!--
+ * Copyright © 2018-2022
+ * Merz Information and Communication Technology AG.
+ * All rights reserved.
+ * 
+ * C021-DE
+ * Einführung in JavaScript: Vertiefung
+-->
+
+<html>
+  <head>
+    <title>Body Mass Index (BMI) Web App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid black;
+      }
+    </style>
+    <script src="scripts/HTML_Tools.js"></script>
+    <script src="scripts/category.js"></script>
+    <script src="scripts/mainCategory.js"></script>
+    <script src="scripts/subCategory.js"></script>
+    <script src="scripts/categories.js"></script>
+    <script src="scripts/bmi.js"></script>
+    <script src="scripts/main.js"></script>
+  </head>
+  <body onload="showBMITable()">
+    <h1>Body Mass Index (BMI) Web App</h1>
+    <h2>Beurteilungen</h2>
+    <div id="table-of-bmi-categories"></div>
+  </body>
+</html>
