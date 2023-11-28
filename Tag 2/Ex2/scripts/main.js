@@ -57,6 +57,8 @@ function showBMIResult() {
 }
 
 function showBMITable() {
+  if (!document.getElementById("table-of-bmi-categories")) return;
+
   console.log(Categories.parseJson());
 
   let table = "";
@@ -122,4 +124,51 @@ function showBMITable() {
   table += `</table>`;
 
   document.getElementById("table-of-bmi-categories").innerHTML = table;
+}
+
+function init() {
+  hideAllPages();
+  showPage("index");
+}
+
+function hideAllPages() {
+  const pages = document.querySelectorAll("main > section");
+  console.log(pages);
+  for (const page of pages) {
+    page.style.display = "none";
+  }
+}
+
+function loadNewPage(pageId) {
+  hideAllPages();
+  showPage(pageId);
+}
+
+function showPage(pageId) {
+  switch (pageId) {
+    case "calculator":
+      document.querySelector("#" + pageId).style.display = "block";
+      break;
+    case "table":
+      document.querySelector("#" + pageId).style.display = "block";
+      break;
+    case "index":
+      document.querySelector("#" + pageId).style.display = "block";
+      break;
+    default:
+      console.log("It didn't work, sorry :(");
+  }
+}
+
+function showCalculator() {
+  console.log("Showing calculator");
+}
+
+function showTable() {
+  console.log("Showing table");
+  showBMITable();
+}
+
+function showIndex() {
+  console.log("Showing index");
 }
