@@ -10,7 +10,7 @@
 "use strict";
 
 function parseJsonTest() {
-  console.log(Categories.parseJson());
+  console.log(Categories.parseJSON());
 }
 
 function showBMIResult() {
@@ -59,7 +59,7 @@ function showBMIResult() {
 function showBMITable() {
   if (!document.getElementById("table-of-bmi-categories")) return;
 
-  console.log(Categories.parseJson());
+  console.log(Categories.parseJSON());
 
   let table = "";
   table += `<table style="background-color: lavender;width: 50%">`;

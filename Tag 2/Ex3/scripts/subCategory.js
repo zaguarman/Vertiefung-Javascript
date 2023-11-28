@@ -3,7 +3,7 @@ class SubCategory extends Category {
     super(name, low, high);
   }
 
-  static parseJson(subCategoryData) {
+  static parseJSON(subCategoryData) {
     return new SubCategory(
       subCategoryData.name,
       subCategoryData.low,
