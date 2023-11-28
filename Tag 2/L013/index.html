@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<!--
+ * Copyright © 2018-2022
+ * Merz Information and Communication Technology AG.
+ * All rights reserved.
+ * 
+ * C021-DE
+ * Einführung in JavaScript: Vertiefung
+-->
+
+<html>
+  <head>
+    <title>Body Mass Index (BMI) Web App</title>
+    <meta
+        charset="UTF-8"/>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"/>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td, th {
+        border: 1px solid black;
+      }
+    </style>
+    <script
+        src="scripts/main.js"></script>
+  </head>
+  <body
+      onload="init()">
+    <header>
+      <h1>Body Mass Index (BMI) Web App</h1>
+    </header>
+    <nav>
+      <button
+          onclick="showHomePage()">Home</button>
+      <button
+          onclick="showTablePage()">Table</button>
+      <button
+          onclick="showCalculatorPage()">Calculator</button>
+    </nav>
+    <main>
+      <section
+          id="home">
+        <p>Willkommen bei der Body Mass Index (BMI) Web App!</p>
+        <h2>Definition</h2>
+        <p>Der Body-Mass-Index (BMI)&nbsp;&ndash; auch Körpermasseindex (KMI), Körpermassenzahl (KMZ) oder Quetelet-Kaup-Index&nbsp;&ndash; ist eine Masszahl für die Bewertung des Körpergewichts eines Menschen in Relation zu seiner Körpergrösse. Sie wurde 1832 von Adolphe Quetelet sowie nach dem Ersten Weltkrieg von Ignaz Kaup entwickelt.</p>
+        <p>Der BMI bezieht die Körpermasse (englisch <em>mass</em>, umgangssprachlich Gewicht) auf das Quadrat der Körpergrösse. Der BMI ist lediglich ein grober Richtwert, da er weder Statur und Geschlecht noch die individuelle Zusammensetzung der Körpermasse aus Fett- und Muskelgewebe eines Menschen berücksichtigt.</p>
+        <h2>Berechnung</h2>
+        <p>BMI = m / l<sup>2</sup></p>
+        <p>
+          <small>
+            m für die Körpermasse (in Kilogramm)<br/>
+            l für die Körpergrösse (in Metern)
+          </small>
+        </p>
+      </section>
+      <section
+          id="table">
+        <h2>Beurteilungen</h2>
+        <div
+            id="table-of-bmi-categories"></div>
+      </section>
+      <section
+          id="calculator">
+        <h2>BMI-Rechner</h2>
+        <h3>Eingabe zur Berechnung</h3>
+        <form
+            name="entry">
+          <p>
+            <label>Ihre Körpermasse (in kg):</label>
+            <input
+                type="number"
+                name="weight"
+                value="50"/>
+          </p>
+          <p>
+            <label>Ihre Körpergrösse (in cm):</label>
+            <input
+                type="number"
+                name="height"
+                value="150"/>
+          </p>
+          <hr/>
+        </form>
+        <button
+            onclick="showBMIResult()">BMI berechnen</button>
+        <h3>Resultat der Berechnung</h3>
+        <div
+            id="mass"></div>
+        <div
+            id="size"></div>
+        <hr/>
+        <div
+            id="bmi"></div>    
+      </section>
+    </main>
+  </body>
+</html>
